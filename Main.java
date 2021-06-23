@@ -6,6 +6,7 @@ public class Main
     static String computer;
     static String user;
     
+    //method to set the choice for computer
     public static void setComputer(){
         int counter;
         Random random =new Random();
@@ -22,16 +23,19 @@ public class Main
         }
     }
     
+    //method to set the choice for user
     public static void setUser() {
         Scanner input1 = new Scanner(System.in);
         
         System.out.println("Choose Rock, Paper or Scissor");
         user = input1.next();
     }
-   
+    
+    //where the main program runs
     public static void Main(String[] args){
         char resume = 'y';
         
+      // loop to play the game again and again
       do{
         Scanner input2 = new Scanner(System.in);
         setUser();
@@ -50,6 +54,7 @@ public class Main
         System.out.println("The program ended, You can quit now");   
     }
     
+    //the method to declare the winner
     public static String judge() {
         String winner1 = "The Computer Wins";
         String winner2 = "The User Wins";
